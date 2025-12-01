@@ -34,6 +34,8 @@ AlzPath-KG-MultiOmics-Data-Based-Knowledge-Graph/
 ├── RawData/
 │   ├── trrust_rawdata.human.tsv         # TRRUST raw regulatory interactions (human)
 │   └── C0002395_disease_gda_summary.tsv # DisGeNET disease–gene associations for Alzheimer’s concept
+|   |__ 9606.protein.info.v12.0.txt.gz   # Download dataset from STRING database
+|   |__ 9606.protein.links.full.v12.0.txt.gz # Download dataset from STRING database
 │
 └── Sample Queries with Output/
     ├── Sample Queries with Output/      # Query descriptions / scripts
