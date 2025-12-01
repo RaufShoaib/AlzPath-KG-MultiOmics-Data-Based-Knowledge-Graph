@@ -1,1 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+
+# Environments
+.venv/
+env/
+venv/
+*.sqlite3
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# LARGE data - do NOT push
+data/
+raw/
+results/
+logs/
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+*.bak
 
