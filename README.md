@@ -67,8 +67,8 @@ Exact software versions and commands are documented in `REPRODUCING.md` (if prov
    - Ensure the following files are available under `RawData/`:
      - `trrust_rawdata.human.tsv`
      - `C0002395_disease_gda_summary.tsv`
-     - '9606.protein.info.v12.0.txt.gz'
-     - '9606.protein.links.full.v12.0.txt.gz'
+     - 9606.protein.info.v12.0.txt.gz
+     - 9606.protein.links.full.v12.0.txt.gz
 
 2. **Generate processed relationship tables**
 
