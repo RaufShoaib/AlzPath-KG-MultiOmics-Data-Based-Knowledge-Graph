@@ -1,0 +1,16 @@
+// Create nodes
+CREATE (gene:Gene {name: 'Gene'})
+CREATE (protein1:Protein {name: 'Protein1'})
+CREATE (protein2:Protein {name: 'Protein2'})
+CREATE (level1:Level {name: 'Level_01'})
+CREATE (level2:Level {name: 'Level_02'})
+CREATE (tf:TF {name: 'TF'})
+CREATE (pub:PubMedId {name: 'PubMed'})
+
+// Create relationships
+CREATE (gene)-[:TRANSCRIBE_INTO]->(protein1)
+CREATE (protein1)-[:HAS_PPI]->(protein2)
+CREATE (protein1)-[:HAS_LEVEL]->(level1)
+CREATE (protein2)-[:HAS_LEVEL]->(level2)
+CREATE (gene)-[:HAS_REGULATION]->(tf)
+CREATE (gene)-[:HAS_REFERENCE]->(pub)

@@ -1,0 +1,29 @@
+
+LOAD CSV WITH HEADERS FROM 'file:///TF_Gene_Regulator_Relation.csv' AS row 
+MERGE(m:TF {name: row.TF })
+MERGE(n:Gene {name:row.Gene})
+MERGE(n)-[:HAS_REGULATION]->(m)
+
+LOAD CSV WITH HEADERS FROM 'file:///TF_Gene_Regulator_Relation.csv' AS row 
+MERGE(m:PubMedId {name: row.PubMedId })
+MERGE(n:Gene {name:row.Gene})
+MERGE(n)-[:HAS_REFERENCE]->(m)
+
+
+LOAD CSV WITH HEADERS FROM 'file:///Gene_Protein1_Relation.csv' AS row 
+MERGE(n:Gene {name:row.Gene})
+MERGE(m:Protein1 {name: row.Protein1})
+MERGE(o:Level {name: row.Level} )
+MERGE(n)-[:TRANSCRIBE_INTO]->(m)
+MERGE(m)-[:HAS_LEVEL]->(o)
+
+
+
+LOAD CSV WITH HEADERS FROM 'file:///Protein1_Protein2_Relation.csv' AS row 
+MERGE(n:Protein1 {name:row.Protein1})
+MERGE(m:Protein2 {name: row.Protein2})
+MERGE(o:Level {name: row.Level} )
+MERGE(n)-[:HAS_PPI]-(m)
+MERGE(m)-[:HAS_LEVEL]->(o)
+
+

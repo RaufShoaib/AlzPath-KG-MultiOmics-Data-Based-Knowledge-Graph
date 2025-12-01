@@ -1,0 +1,22 @@
+Query_01:
+MATCH (n:TF)–(m:Gene)–(k:PubMedId)
+WHERE m.name = "CTNNB1"
+RETURN n, m, k
+
+Query_02:
+MATCH p = (n:Gene)–>(m:Protein1)–>(k:Protein2)–>(l:Level)
+WHERE n.name = "ACE"
+RETURN p AS path LIMIT 20
+
+Query_03:
+MATCH p = (k:Protein1)<–(n:Gene)<–(m:TF)
+WHERE m.name = "STAT1"
+RETURN p AS path
+
+Query_04:
+MATCH p = shortestPath((p1:Protein2 {name:'JAK2'})-[*..4]-(tf:TF {name:'STAT1'}))
+RETURN p;
+
+Query_05:
+MATCH (g:Gene {name:"CTNNB1"})-[r*1..3]-(x)
+RETURN g, x
