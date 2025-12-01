@@ -95,6 +95,8 @@ Exact software versions and commands are documented in `REPRODUCING.md` (if prov
 - Raw data in `RawData/` is derived from:
   - **TRRUST** (human TF–target gene regulatory interactions)
   - **DisGeNET** (disease–gene associations for Alzheimer’s-related concept C0002395)
+  - **STRING Database** (PPI Interactions datasets 9606.protein.info.v12.0.txt.gz, 9606.protein.links.full.v12.0.txt.gz)
+
 - Please refer to the original resources for licensing and usage terms.
 - Scripts and processed data are provided for academic and non-commercial reproducibility.
 
